@@ -1,10 +1,10 @@
-# Tutorials and Text Books (Work In Process)
+# Tutorials and Text Books (Work In Progress)
 
-- Laplacians of graphs and Cheeger inequalities
+- [Foundations of Data Science](http://www.cs.cornell.edu/jeh/book11April2014.pdf)
+
+- [Laplacians of graphs and Cheeger inequalities](http://www.math.ucsd.edu/~fan/wp/cheeger.pdf)
 
     谱聚类与Markov链之间的数学关系
-
-- Foundations of Data Science
 
 - [Advances In Convex NMF: Linear Programming](https://calculatedcontent.com/2013/05/06/advances-in-convex-nmf-part-1-linear-programming/)
 

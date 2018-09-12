@@ -1,4 +1,4 @@
-# Artificial Intelligence Resources (Work In Process)
+# Artificial Intelligence Resources (Work In Progress)
 
 ## Tutorials
 
