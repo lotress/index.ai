@@ -194,6 +194,10 @@
 
 ## Memory
 
+- [Tracking The World State With Recurrent Entity Networks](https://arxiv.org/abs/1612.03969)
+
+    Recurrent Entity Network ，通过内容寻址捕捉输入从而对记忆单元进行实时的更新
+
 - [Recurrent Entity Networks with Delayed Memory Update for Targeted Aspect-based Sentiment Analysis](https://arxiv.org/abs/1804.11019)
   
     根据给定的文本数据特点对 Entity Network 记忆加入延迟更新
