@@ -154,6 +154,10 @@
 
     流生成网络，使用设计的 1x1 卷积等可逆变换，每一层输出一个量作为输入的编码
 
+- [An Intriguing Failing of Convolutional Neural Networks and the CoordConv Solution](https://arxiv.org/abs/1807.03247)
+
+    讨论了平移不变的卷积的局限性，提出 `CoordConv` 即图像特征拼接位置特征再卷积的操作克服了位置局限性并具有广泛应用前景
+
 ## Decision
 
 - [Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
@@ -211,3 +215,7 @@
 - [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation](https://arxiv.org/abs/1708.05144)
 
     使用 Kronecker 分解二阶近似损失的曲率（ KL 散度）并使用信任区约束的参数更新改进 actor-critic 方法
+
+- [Welcoming the Era of Deep Neuroevolution](https://eng.uber.com/deep-neuroevolution/)
+
+    综述使用进化算法训练神经网络，对比进化算法与梯度方法，进化算法更容易跨越梯度障碍，不容易进入狭窄但连续的梯度方向；根据参数敏感程度即模型输出关于参数的梯度成比例变异更加稳定；纳入多样性/新颖性的群体进化算法在激励稀疏的问题上可能效果更好
