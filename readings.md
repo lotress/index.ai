@@ -49,6 +49,10 @@
     $$
     $D, D'$ 为 *KL* 与其反向散度， $r(x)$ 取 $p(x)$ 或 $q(x)$ ， $t(z)$ 取 $p(z)$ 或 $q(z)$
 
+- [Uncovering divergent linguistic information in word embeddings with lessons for intrinsic and extrinsic evaluation](https://arxiv.org/abs/1809.02094)
+
+    讨论了词向量的高阶相似度，设词向量矩阵 $X$ ，定义 n 阶相似度矩阵 $M_n(X)=(XX^T)^n$ ， $X^TX$ 的特征值分解为 $Q\Lambda Q^T$ ，令线性变换 $W_\alpha=Q\Lambda^\alpha$ ，可知 $M_n(X)=M_1(XW_{\frac{n-1}{2}})$ ，故调整实数域上的参数 $\alpha$ 即可表示词向量的高阶相似度
+
 ## Modeling
 
 - [The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches](https://arxiv.org/abs/1803.01164)
