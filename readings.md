@@ -1,11 +1,11 @@
 # Reading materials
 - [Reading materials](#reading-materials)
-    - [Theory](#theory)
-    - [Modeling](#modeling)
-    - [Transformation](#transformation)
-    - [Decision](#decision)
-    - [Memory](#memory)
-    - [Optimization](#optimization)
+  - [Theory](#theory)
+  - [Modeling](#modeling)
+  - [Transformation](#transformation)
+  - [Decision](#decision)
+  - [Memory](#memory)
+  - [Optimization](#optimization)
 
 ====
 
@@ -52,6 +52,14 @@
 - [Uncovering divergent linguistic information in word embeddings with lessons for intrinsic and extrinsic evaluation](https://arxiv.org/abs/1809.02094)
 
     讨论了词向量的高阶相似度，设词向量矩阵 $X$ ，定义 n 阶相似度矩阵 $M_n(X)=(XX^T)^n$ ， $X^TX$ 的特征值分解为 $Q\Lambda Q^T$ ，令线性变换 $W_\alpha=Q\Lambda^\alpha$ ，可知 $M_n(X)=M_1(XW_{\frac{n-1}{2}})$ ，故调整实数域上的参数 $\alpha$ 即可表示词向量的高阶相似度
+
+- [Global versus Localized Generative Adversarial Nets](https://arxiv.org/abs/1711.06020)
+
+    提出以数据流形上局部切空间的正交基作为生成模型的表示，生成器为数据点 $x$ 与局部坐标 $z$ 的函数 $G(x,z)=x$ ，多个局部生成器拼合整个数据流形。其中局部性约束 $G(x,0)=x$ 使得平直空间中的 $z$ 的改变在 $x$ 的小邻域上可以直接映射为生成数据的属性变化，正交性约束 $J_x^TJ_x=I_N$ 防止生成器模式塌缩， *Jacobian* 矩阵 $J_x\triangleq\frac{\partial G(x,z)}{\partial z}|_{z=0}\in\mathbb{R}^{D\times N}$ ，上述两约束的正则化项可加入生成器的损失中训练。判别器 $P(y|x)$ 可与 $K$ 类分类任务联合半监督训练，其目标为
+    $$
+    \underset{P}{max}\mathbb{E}_{(x_l,y_l)\sim P_{\mathcal{L}}}\log P(y_l|x_l)+\mathbb{E}_{x_u\sim P_{\mathcal{X}}}\log P(y_u\leq K|x_u)+\mathbb{E}_{x\sim P_{\mathcal{X}},z\sim P_{\mathcal{Z}}}\log P(y=K+1|G(x,z))-\sum^K_{k=1}\mathbb{E}_{x\sim P_{\mathcal{X}}}\|\nabla_x^G\log P(y=k|x)\|^2
+    $$
+    其中 $(x_l,y_l)$ 为 $K$ 类标记数据， $x_u$ 为非标记数据， $K+1$ 类为生成数据， $\nabla_x^Gf\triangleq\nabla_zf(G(x,z))|_{z=0}=J_x^T\nabla_xf(x)$ ，最后一项惩罚分类器 $f$ 在流形切平面上的突然变化， $|f(G(x,z+\delta z))-f(G(x,z))|^2\approx\|\nabla_x^Gf\|^2\delta z$ 。
 
 ## Modeling
 
