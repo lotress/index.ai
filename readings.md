@@ -231,3 +231,7 @@
 - [Welcoming the Era of Deep Neuroevolution](https://eng.uber.com/deep-neuroevolution/)
 
     综述使用进化算法训练神经网络，对比进化算法与梯度方法，进化算法更容易跨越梯度障碍，不容易进入狭窄但连续的梯度方向；根据参数敏感程度即模型输出关于参数的梯度成比例变异更加稳定；纳入多样性/新颖性的群体进化算法在激励稀疏的问题上可能效果更好
+
+- [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)
+
+    机器学习系统设计相关的风险因素，包括系统边界侵蚀、纠缠（多个模型间的非单调关系）、不可见反馈、不可见消费者、数据依赖、配置问题、外部环境变化和若干反模式
