@@ -61,6 +61,10 @@
     $$
     其中 $(x_l,y_l)$ 为 $K$ 类标记数据， $x_u$ 为非标记数据， $K+1$ 类为生成数据， $\nabla_x^Gf\triangleq\nabla_zf(G(x,z))|_{z=0}=J_x^T\nabla_xf(x)$ ，最后一项惩罚分类器 $f$ 在流形切平面上的突然变化， $|f(G(x,z+\delta z))-f(G(x,z))|^2\approx\|\nabla_x^Gf\|^2\delta z$ 。
 
+- [How Powerful are Graph Neural Networks?](https://arxiv.org/abs/1810.00826)
+
+    分析图神经网络的表示能力，一结点上的一次迭代将（特征）标签的multiset映射到新的（特征）标签，故表示能力最大的图神经网络其（必要非充分条件）结点与全图的聚合映射必然为单射方可区分不同的输入multiset，此时该变换与Weisfeiler-Lehma图同构判定过程等价；累积和就是个满足单射条件的聚合映射。
+
 ## Modeling
 
 - [The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches](https://arxiv.org/abs/1803.01164)
@@ -123,6 +127,10 @@
 - [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593)
 
     CycleGAN，使用对抗损失拟合互逆映射 $F(G(X))\approx X$ 与 $G(F(Y))\approx Y$
+
+- [Relational inductive biases, deep learning, and graph networks](https://arxiv.org/abs/1806.01261)
+
+    认为组合泛化是重要目标而结构表示对此很关键，描述了偏好关系归纳的图网络框架，作为学习与系统中实体数量和顺序无关泛化的一般范式
 
 ## Transformation
 
