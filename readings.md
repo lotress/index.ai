@@ -132,6 +132,10 @@
 
     认为组合泛化是重要目标而结构表示对此很关键，描述了偏好关系归纳的图网络框架，作为学习与系统中实体数量和顺序无关泛化的一般范式
 
+- [How Can We Be So Dense? The Benefits of Using Highly Sparse Representations](https://arxiv.org/abs/1903.11257)
+
+    认为稀疏表示有利于抵抗噪音，两各维度独立分布的随机向量内积相似度大于一定阈值的概率，相对向量非零分量与总维度比例呈指数关系。文章提出的结构仅激活固定数量的输出分量，初始化固定数量的矩阵权重，其余权重保持为0，激活函数为保留 top-k ，为均衡各分量的激活频率，以各分量的激活频率加权，推断时可以加大 k 。
+
 ## Transformation
 
 - [Towards Deep Symbolic Reinforcement Learning](https://arxiv.org/abs/1609.05518)
