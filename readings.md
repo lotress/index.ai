@@ -140,6 +140,10 @@
 
     认为稀疏表示有利于抵抗噪音，两各维度独立分布的随机向量内积相似度大于一定阈值的概率，相对向量非零分量与总维度比例呈指数关系。文章提出的结构仅激活固定数量的输出分量，初始化固定数量的矩阵权重，其余权重保持为0，激活函数为保留 top-k ，为均衡各分量的激活频率，以各分量的激活频率加权，推断时可以加大 k 。
 
+- [Revisiting Self-Supervised Visual Representation Learning](https://arxiv.org/abs/1901.09005)
+
+    评估多个自监督图像表示模型和任务对下游任务的影响，结论包括：模型结构很重要，残差比VGG类的下游表现好；自监督效果好的模型未必下游表现好；越宽（通道数等）越好；下游用 SGD 训练 Logisitc 回归收敛很慢。
+
 ## Transformation
 
 - [Towards Deep Symbolic Reinforcement Learning](https://arxiv.org/abs/1609.05518)
