@@ -1,11 +1,11 @@
 # Reading materials
-- [Reading materials](#Reading-materials)
-  - [Theory](#Theory)
-  - [Modeling](#Modeling)
-  - [Transformation](#Transformation)
-  - [Decision](#Decision)
-  - [Memory](#Memory)
-  - [Optimization](#Optimization)
+- [Reading materials](#reading-materials)
+  - [Theory](#theory)
+  - [Modeling](#modeling)
+  - [Transformation](#transformation)
+  - [Decision](#decision)
+  - [Memory](#memory)
+  - [Optimization](#optimization)
 
 ====
 
@@ -255,3 +255,7 @@
 - [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)
 
     机器学习系统设计相关的风险因素，包括系统边界侵蚀、纠缠（多个模型间的非单调关系）、不可见反馈、不可见消费者、数据依赖、配置问题、外部环境变化和若干反模式
+
+- [The Perception-Distortion Tradeoff](https://arxiv.org/abs/1711.06077)
+
+    证明图像还原任务的失真损失$\mathbb{E}[\Delta(X,\hat{X})]$与感知损失$d(p_X,p_{\hat{X}|Y})$不可兼得，其中X为原图像，$\hat{X}$为给定输入Y下的还原输出，$d(p,q)$为关于q突的概率散度，则感知-失真损失函数$P(D)=\min_{p_{\hat{X}|Y}}d(p_X,p_{\hat{X}})\ s.t.\ \mathbb{E}[\Delta(X,\hat{X})]\le D$为单调突函数；文献建议共同使用侧重失真的full-reference与侧重感知的no-reference指标评估图像还原任务。
