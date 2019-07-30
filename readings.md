@@ -190,6 +190,10 @@
 
     讨论了平移不变的卷积的局限性，提出 `CoordConv` 即图像特征拼接位置特征再卷积的操作克服了位置局限性并具有广泛应用前景
 
+- [Predicting the Generalization Gap in Deep Networks with Margin Distributions](https://arxiv.org/abs/1810.00113)
+
+    提出神经网络层的归一化 margin 分布可以良好估计泛化 gap ，给定 l 层的特征表示 $x^l$ ，以一阶泰勒近似分类器 f 关于类别 i, j 决策边界的 margin ， $d_{f,(i,j)}(x^l)=\frac{f_i(x^l)-f_j(x^l)}{\|\nabla_{x^l} f_i(x^l)-\nabla_{x^l} f_j(x^l)\|_2}$ ，并以表示的协方差归一化得到 margin 分布 $\hat{d}_{f,(i,j)}(x_k^l)=\frac{d_{f,(i,j)}(x_k^l)}{\sqrt{v(x^l)}}\ ,\ v(x^l)=tr(\frac{1}{n}\sum_{k=1}^{n}(x_k^l-\hat{x}^l)(x_k^l-\hat{x}^l)^T)\ ,\ \hat{x}^l=\frac{1}{n}\sum_{k=1}^{n}x_k^l$ 。文献的实验使用 margin 分布的四分卫点等特征建立对数线性模型预测深度模型的泛化 gap 。
+
 ## Decision
 
 - [Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
