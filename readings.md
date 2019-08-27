@@ -262,4 +262,22 @@
 
 - [The Perception-Distortion Tradeoff](https://arxiv.org/abs/1711.06077)
 
-    证明图像还原任务的失真损失$\mathbb{E}[\Delta(X,\hat{X})]$与感知损失$d(p_X,p_{\hat{X}|Y})$不可兼得，其中X为原图像，$\hat{X}$为给定输入Y下的还原输出，$d(p,q)$为关于q突的概率散度，则感知-失真损失函数$P(D)=\min_{p_{\hat{X}|Y}}d(p_X,p_{\hat{X}})\ s.t.\ \mathbb{E}[\Delta(X,\hat{X})]\le D$为单调突函数；文献建议共同使用侧重失真的full-reference与侧重感知的no-reference指标评估图像还原任务。
+    证明图像还原任务的失真损失$\mathbb{E}[\Delta(X,\hat{X})]$与感知损失$d(p_X,p_{\hat{X}|Y})$不可兼得，其中X为原图像，$\hat{X}$为给定输入Y下的还原输出，$d(p,q)$为关于q的凸概率散度，则感知-失真损失函数$P(D)=\min_{p_{\hat{X}|Y}}d(p_X,p_{\hat{X}})\ s.t.\ \mathbb{E}[\Delta(X,\hat{X})]\le D$为单调凸函数；文献建议共同使用侧重失真的full-reference与侧重感知的no-reference指标评估图像还原任务。
+
+- [Quasi-hyperbolic momentum and Adam for deep learning](https://arxiv.org/abs/1810.06801)
+
+    将随机梯度下降的参数更新和动量衰减因子解耦，减少动量估计引入的偏差， QHM 更新规则如下
+    $$
+    \begin{aligned}
+    g_{t+1}&\leftarrow\beta\cdot g_{t}+(1-\beta)\cdot\nabla\hat{L}_t(\theta_t)\\
+    \theta_{t+1}&\leftarrow\theta_t-\alpha[(1-\nu)\cdot\nabla\hat{L}_t(\theta_t)+\nu\cdot g_{t+1}]
+    \end{aligned}
+    $$
+    类似改动 Adam 优化，QHAdam 更新规则如下
+    $$
+    \begin{aligned}
+    g_{t+1}&\leftarrow\beta_1\cdot g_{t}+(1-\beta_1)\cdot\nabla\hat{L}_t(\theta_t) &g'_{t+1}\leftarrow(1-\beta_1^{t+1})^{-1}\cdot g_{t+1}\\
+    s_{t+1}&\leftarrow\beta_2\cdot s_{t}+(1-\beta_2)(\nabla\hat{L}_t(\theta_t))^2 &s'_{t+1}\leftarrow(1-\beta_2^{t+1})^{-1}\cdot s_{t+1}\\
+    \theta_{t+1}&\leftarrow\theta_t-\alpha[\frac{(1-\nu_1)\cdot\nabla\hat{L}_t(\theta_t)+\nu_1\cdot g'_{t+1}}{\sqrt{(1-\nu_2)(\nabla\hat{L}_t(\theta_t))^2+\nu_2\cdot s'_{t+1}}+\epsilon}]
+    \end{aligned}
+    $$
