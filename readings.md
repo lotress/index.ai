@@ -194,6 +194,11 @@
 
     提出神经网络层的归一化 margin 分布可以良好估计泛化 gap ，给定 l 层的特征表示 $x^l$ ，以一阶泰勒近似分类器 f 关于类别 i, j 决策边界的 margin ， $d_{f,(i,j)}(x^l)=\frac{f_i(x^l)-f_j(x^l)}{\|\nabla_{x^l} f_i(x^l)-\nabla_{x^l} f_j(x^l)\|_2}$ ，并以表示的协方差归一化得到 margin 分布 $\hat{d}_{f,(i,j)}(x_k^l)=\frac{d_{f,(i,j)}(x_k^l)}{\sqrt{v(x^l)}}\ ,\ v(x^l)=tr(\frac{1}{n}\sum_{k=1}^{n}(x_k^l-\hat{x}^l)(x_k^l-\hat{x}^l)^T)\ ,\ \hat{x}^l=\frac{1}{n}\sum_{k=1}^{n}x_k^l$ 。文献的实验使用 margin 分布的四分卫点等特征建立对数线性模型预测深度模型的泛化 gap 。
 
+- [Hyperbolic Graph Convolutional Neural Networks](https://github.com/HazyResearch/hgcn)
+
+    d 维 Minkowski 内积 $\langle x, y \rangle_\mathcal{L}=-x_0y_0+x_1y_1+\cdots +x_dy_d$ ，具有常负曲率 $-1/K(K>0)$ 的双曲面空间 $\mathbb{H}^{d,K}:=\{x\in \mathbb{R}^{d+1}:\langle x,x \rangle_\mathcal{L}=-K,x_0>0\}$ ，其切空间 $\mathcal{\tau}_x\mathbb{H}^{d,K}:=\{v\in\mathbb{R}^{d+1}:\langle v,x \rangle_\mathcal{L}=0\}$ 是双曲面流形在 x 处的一阶局部近似且其 Minkowski 内积正定，故在切空间中进行领域聚合等欧式距离的运算，双曲面流形上的测地距离则为 $d_\mathcal{L}^K(x,y)=\sqrt{K}\mathrm{arccosh}(-\langle x,y \rangle_\mathcal{L}/K)$ ，此距离能更好反映树/图中指数扩大的邻域；于是有双曲面流形到切空间映射 $\log_x^K(y)=d_\mathcal{L}^K(x,y)\frac{y+\frac{1}{K}\langle x,y \rangle_\mathcal{L}x}{\|y+\frac{1}{K}\langle x,y \rangle_\mathcal{L}x\|_\mathcal{L}}$ ，逆映射 $\exp_x^K(v)=\cosh(\frac{\|v\|_\mathcal{L}}{\sqrt{K}})x+\sqrt{K}\sinh(\frac{\|v\|_\mathcal{L}}{\sqrt{K}})\frac{v}{\|v\|_\mathcal{L}}$ ，向量 $v\in\mathbb{R}^{d+1}$ 在 $\mathcal{\tau}_x\mathbb{H}^{d,K}$ 上的投影 $\Pi(v):=v+\frac{1}{K}\langle v,x \rangle_\mathcal{L}x$ ，而切向量 $v\in\mathcal{\tau}_x\mathbb{H}^{d,K}$ 到切空间 $\mathcal{\tau}_y\mathbb{H}^{d,K}$ 的平移为 $P_{x\rightarrow y}(v)=v-\frac{\langle \log_x^K(y),v \rangle_\mathcal{L}}{d_\mathcal{L}^K(x,y)^2}(\log_x^K(y)+\log_y^K(x))$ ；非线性变换需要连接不同的空间曲率，因此在不受曲率影响的原点上映射双曲面流形与切空间 $\sigma^{\otimes
+K_{\mathcal{L}-1},K_\mathcal{L}}=\exp_o^{K_\mathcal{L}}(\sigma(\log_x^{K_{\mathcal{L}-1}}(x^H)))$
+
 ## Decision
 
 - [Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
