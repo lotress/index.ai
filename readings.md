@@ -69,6 +69,10 @@
 
     选择了互信息量化神经网络中间状态编码的容量，对于n个词的句子X和其中间状态表示$\Phi(x)$学习一组球形正态噪声$\epsilon=[\epsilon_1^T, \epsilon_2^T, \dots, \epsilon_n^T]^T$扰动$\tilde{x}_i=x_i+\epsilon_i$，最小化损失$L(\sigma)=E_{\epsilon}\|\Phi(\tilde{x})-\Phi(x)\|^2-\lambda\sum_{i=1}^{n}H(\tilde{X}_i|\Phi(x))|_{\epsilon_i\sim N(0,\sigma_i^2I)}$，其中$\lambda$为大于0的超参数，期望项最大化$\sum_{i}\sum_{\tilde{x}_i}\log p(\tilde{x}_i|\Phi(x))$，松弛项鼓励更大的条件熵，即该噪声应尽可能扰动输入而保持状态表示不变。注意关于噪声的期望拟合了表示的条件分布，所以可以用$H(\tilde{X}_i|\Phi(x))$近似$H(X_i|\Phi(x))$，即$p(\tilde{x}_i|\Phi(x))\approx p(x_i|\Phi(x))\Rightarrow H(X_i|\Phi(x))\approx H(\tilde{X}_i|\Phi(x))=\frac{K}{2}\log(2\pi e)+K\log(\sigma_i)$
 
+- [Group Representation Theory for Knowledge Graph Embedding](https://grlearning.github.io/papers/15.pdf)
+
+    三元组的关系可视为群的元素，交换群的任意有限维不可约复表示都是一维的，即群 G 的一个不可约表示是同态 $G\rightarrow GL_1(\mathbb{C})=\mathbb{C}^*$ ， $\mathbb{C}^*$ 为一个非平凡复乘法群；对有限交换群，不可约表示是单位根的数乘，所以复平面上的旋转可表示任意有限交换群；非交换群的表示可通过将复数域扩展为四元数域建模
+
 ## Modeling
 
 - [The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches](https://arxiv.org/abs/1803.01164)
