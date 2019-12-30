@@ -73,6 +73,10 @@
 
     三元组的关系可视为群的元素，交换群的任意有限维不可约复表示都是一维的，即群 G 的一个不可约表示是同态 $G\rightarrow GL_1(\mathbb{C})=\mathbb{C}^*$ ， $\mathbb{C}^*$ 为一个非平凡复乘法群；对有限交换群，不可约表示是单位根的数乘，所以复平面上的旋转可表示任意有限交换群；非交换群的表示可通过将复数域扩展为四元数域建模
 
+- [Logical Expressiveness of Graph Neural Networks](https://grlearning.github.io/papers/92.pdf)
+
+    以 Weisfeiler-Lehman 图同构测试论证典型的领域聚合图网络（AC-GNN）表示能力弱于 $FOC_2$ （带计数量词的2变量一阶逻辑）， 而 AC-GNN 包含描述逻辑 ALCQ ，其禁止了 $FOC_2$ 的三种非局域公式 1) 否定二元关系如 $\neg E(x,y)$ 2) 无自由变量的子式如 $R(v)\wedge\exist{x}B(x)$ 3) 不连接的公式如 $\exist{v}(R(v)\wedge B(x))$ ；当 GNN 每次聚合时加入图的全局表示信息就等价于一元 $FOC_2$
+
 ## Modeling
 
 - [The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches](https://arxiv.org/abs/1803.01164)
